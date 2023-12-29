@@ -8,7 +8,7 @@ body {
 }
 div {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 1em;
 }
 input {
@@ -27,8 +27,9 @@ button {
       <input id="type" value="" disabled/>
     </div>
     <div>
-      <button onclick="accept()">Accept</button>
       <button onclick="reject()">Reject</button>
+      <input id="selected" value="0" disabled/>
+      <button onclick="accept()">Accept</button>
     </div>
     <table id="stock">
       <thead>

@@ -8,6 +8,7 @@ function init(data) {
     row.insertCell().innerHTML = `<input id="ab:${length}" value="${ab}" type="number"/>`;
     row.insertCell().innerHTML = `<input id="ru:${length}" value="${ru}" type="number" />`;
   }
+  document.getElementById("selected").value = "0";
 }
 
 function select() {
@@ -47,6 +48,10 @@ function accept(event) {
   let length = document.getElementById("length").value;
   let input = document.getElementById(`${type}:${length}`);
   input.value = (parseInt(input.value) - 1).toString();
+
+  let selected = document.getElementById("selected");
+  selected.value = parseFloat(selected.value) + (0.07 * parseFloat(length)/1000)
+
   select();
 }
 
