@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+body {
+  display: flex;
+  flex-direction: column;
+}
+div {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+input {
+  font-size: 150%;
+}
+button {
+  font-size: 200%;
+}
+    </style>
   </head>
   <body>
     <div>
-      <input id="length" value=""/>
-      <input id="type" value=""/>
-      <br/>
-      <br/>
+      <input id="length" value="" disabled/>
+      <input id="type" value="" disabled/>
+    </div>
+    <div>
       <button onclick="accept()">Accept</button>
       <button onclick="reject()">Reject</button>
     </div>
-    <br/>
-    <br/>
     <table id="stock">
       <thead>
         <tr>

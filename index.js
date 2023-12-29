@@ -5,8 +5,8 @@ function init(data) {
     let row = table.tBodies[0].insertRow(-1);
     row.dataset["length"] = `${length}`;
     row.insertCell().innerHTML = `${length}`;
-    row.insertCell().innerHTML = `<input id="ab:${length}" value="${ab}" />`;
-    row.insertCell().innerHTML = `<input id="ru:${length}" value="${ru}" />`;
+    row.insertCell().innerHTML = `<input id="ab:${length}" value="${ab}" type="number"/>`;
+    row.insertCell().innerHTML = `<input id="ru:${length}" value="${ru}" type="number" />`;
   }
 }
 
